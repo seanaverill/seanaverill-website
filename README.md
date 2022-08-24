@@ -44,3 +44,7 @@ If you get a `webrick` error try the below command before trying to start the we
 ```sh
 bundle add webrick
 ```
+
+## Bootstrap
+
+You can learn how to setup Bootstrap <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">here</a> if you want to streamline your CSS/SASS development.
