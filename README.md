@@ -38,6 +38,10 @@ To start the local webserver run the command below in the directory of the site.
 ```sh
 bundle exec jekyll serve
 ```
+You can see your locally hosted site here:<br>
+<a href="https://localhost:4000">localhost:4000</a>
+
+## Troubleshooting
 
 If you get a `webrick` error try the below command before trying to start the webserver again.
 
