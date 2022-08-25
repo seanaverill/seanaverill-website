@@ -8,11 +8,19 @@ body{
     background-color: rgb(20, 26, 72);
     color: #fff;
     }
-    h1{
+
+h1{
     margin-top:30px;
     font-family: 'Fira Code', monospace;
 }
+
+.introtext{
+width: 80%;
+margin: auto;
+}
  
+/* Dark Mode  */
+
 .light{
     background-color: rgb(211, 211, 211);
     color:rgb(40, 40, 40);
@@ -20,13 +28,13 @@ body{
 
 
 
-    input[type=checkbox]{
+input[type=checkbox]{
         height: 10px;
         width: 10px;
         visibility: hidden;
     }
     
-    label {
+label {
         cursor: pointer;
         text-indent: -9999px;
         width: 50px;
@@ -37,7 +45,7 @@ body{
         position: relative;
     }
     
-    label:after {
+label:after {
         content: '';
         position: absolute;
         top: 2.5px;
@@ -49,21 +57,109 @@ body{
         transition: 0.3s;
     }
     
-    input:checked + label {
+input:checked + label {
         background: #bada55;
     }
     
-    input:checked + label:after {
+input:checked + label:after {
         left: calc(100% - 2.5px);
         transform: translateX(-100%);
     }
     
-    label:active:after {
+label:active:after {
         width: 40px;
     }
     
-   .upperright{
+.upperright{
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 10px;
    }
+
+/* Accordion */
+
+  .wrapper{
+    width:60%;
+  }
+
+  .panel-design{
+background-color: aqua;
+color: #000;
+  }
+  @media(max-width:992px){
+   .wrapper{
+    width:85%;
+  } 
+  }
+  .panel-heading {
+    padding: 0;
+      border:0;
+      background-color: rgb(165, 14, 202);
+  }
+  .panel-title>a, .panel-title>a:active{
+      display:block;
+      padding:15px;
+    color:rgb(255, 255, 255);
+    font-size:16px;
+    font-weight:bold;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    word-spacing:3px;
+      text-decoration:none;
+  }
+  .panel-heading  a:before {
+     font-family: 'Glyphicons Halflings';
+     content: "\e114";
+     float: right;
+     transition: all 0.5s;
+  }
+  .panel-heading.active a:before {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      transform: rotate(180deg);
+  } 
+
+
+
+
+  /* Style the header */
+.header {
+    padding: 10px 16px;
+    background: #1eeb9d00;
+    height: 80px;
+  }
+
+  .sticky{
+    position: fixed;
+    top:0;
+    width: 100%;
+    backdrop-filter: saturate(180%) blur(20px);
+    background: #7575752a;
+  }
+
+  .sticky + .content {
+    padding-top: 300px;
+  }
+  
+  .menuitem{
+    font-size: 36px;
+    color:rgb(76, 255, 252);
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-family: 'Fira Code', monospace;
+
+  }
+
+  .menudivider{
+    font-size: 36px;
+    color:rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-family: 'Fira Code', monospace;
+
+  }
+
+ 
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+.class1{
+        float: left;
+        margin: 10px;
+        background: rgb(99, 222, 23);
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+}
+    
+.class2{
+        float: left;
+        margin: 10px;
+        background: rgb(195, 147, 14);
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+}
+</style>
+<script>
+    function toggleclass(el){
+    el.className = "class2";
+        
+}
+</script>
+</head>
+
+<body>
+    <div class="class1" onclick="this.className='class2'"></div>
+    <div class="class1" onclick="toggleClass(this)"></div>
+    <div class="class1" onclick="toggleClass(this)"></div>
+    <div class="class2" onclick="toggleClass(this)"></div>
+</body>
+</html>
+
+
+
+function collapseFunc() {
+    var accordion = document.querySelector('.class1');
+    accordion.classList.toggle('class2');
+    }

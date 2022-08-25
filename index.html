@@ -1,33 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
-       <!-- <link href="/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">   -->
- 
+  <head>
+       
+       <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
       <link href="/css/seanaverill.css" rel="stylesheet">
+
+
       <script type="text/javascript" src="/js/seanaverill.js"></script>
+      <!-- <script type="text/javascript" src="/js/accordion.js"></script> -->
+
 
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
-
+ 
    
-       <head>
+       
            <meta charset="UTF-8">
            <meta name="viewport" content="width=device-width, initial-scale=1.0">
            <title>Sean Averill</title>
-       </head>
-        <header>
+           
+
+
+
+    </head>
+
+      <header>
+        <div class="header" id="myHeader">
+         <a class="menuitem" href="#work">Work</a>
+         <span class="menudivider">//</span>
+         <a class="menuitem" href="#work">Code</a>
+         <span class="menudivider">//</span>
+         <a class="menuitem" href="#work">Play</a>
           <input type="checkbox" class="upperright" onclick="myFunction()" id="switch" /><label class="upperright" for="switch">Toggle</label>
-        </header>
+        </div>
+        </header> 
+
+
        <body>
-        
+
+        <!-- Intro Text -->
+        <div class="introtext">
            <h1>My Portfolio</h1>
             
-       <p>Here is a collection of my work.</p>
+       <p>Here is a collection of my work. I had the privilege of working with Kemi as part of the 2021 winter cohort for @co.lab. As the Product manager on the team, I shared the vision of the problem we aimed to solve and found Kemi to be an excellent resource. Kemi offered design driven insights while immersing herself into the problem space. She is a seasoned and creative designer who always aims to understand the needs of the user. Kemi worked with the team to designed a beautiful product and I'm sure she will go on to design other great apps. I consider her to be an asset to any team. I had the privilege of working with Kemi as part of the 2021 winter cohort for @co.lab. As the Product manager on the team, I shared the vision of the problem we aimed to solve and found Kemi to be an excellent resource. Kemi offered design driven insights while immersing herself into the problem space. She is a seasoned and creative designer who always aims to understand the needs of the user. Kemi worked with the team to designed a beautiful product and I'm sure she will go on to design other great apps. I consider her to be an asset to any team. I had the privilege of working with Kemi as part of the 2021 winter cohort for @co.lab. As the Product manager on the team, I shared the vision of the problem we aimed to solve and found Kemi to be an excellent resource. Kemi offered design driven insights while immersing herself into the problem space. She is a seasoned and creative designer who always aims to understand the needs of the user. Kemi worked with the team to designed a beautiful product and I'm sure she will go on to design other great apps. I consider her to be an asset to any team. I had the privilege of working with Kemi as part of the 2021 winter cohort for @co.lab. As the Product manager on the team, I shared the vision of the problem we aimed to solve and found Kemi to be an excellent resource. Kemi offered design driven insights while immersing herself into the problem space. She is a seasoned and creative designer who always aims to understand the needs of the user. Kemi worked with the team to designed a beautiful product and I'm sure she will go on to design other great apps. I consider her to be an asset to any team.</p>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
 
-           
-           
+
+<!-- Collapsable Accordion -->
+<div class="wrapper center-block">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+    
+  <div class="panel panel-design">
+    <div class="panel-heading active" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        <div style="float: left" >
+<img src="https://loremflickr.com/320/240" />
+</div>
+<div>
+Text content goes here
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-design">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-design">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+<script  src="/js/seanaverill.js"></script>
        </body>
         
        </html>
