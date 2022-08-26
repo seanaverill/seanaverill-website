@@ -235,5 +235,12 @@ button{
 .companyimage{
   width: 150px;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 26px;
+}
+
+.jobdescription{
+  margin-top: 6px;
+  margin-left: 193px;
+  margin-right: 10px;
+  text-align: left;
 }
