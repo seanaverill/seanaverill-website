@@ -1,14 +1,17 @@
 :root {
   --darkback: #141a48;
   --panelback: #22295d;
+  --panelbacklight:#565656;
   --companylinkback:#3a4280;
   --companylinktext:#fff;
+  --compWebLight:#6f6f6f;
   --paneltitleback:#3a4280;
+  --paneltitlebacklight:#6f6f6f;
   --lightback:#d3d3d3;
-  --lighthover:rgb(91, 91, 91);
+  --lighthover:#5b5b5b;
   --lightmodetext:#000;
   --darkmodetext:#fff;
-  --lightaccent:#bada55;
+  --lightaccent:#22295d;
   --darkaccent:#eea425;
   --paneltext:#fff;
   --paneltitle:#fff;
@@ -139,6 +142,10 @@ border:0px;
       background: var(--paneltitleback);
       border-radius: 10px;
   }
+  .panelheadlight{
+    background: var(--paneltitlebacklight);
+  }
+
   .panel-title>a, .panel-title>a:active{
       display:block;
       padding:15px;
@@ -168,7 +175,9 @@ border:0px;
     margin-top: 10px;
     border-radius: 10px;
 }
-
+.panelbacklight{
+background: var(--panelbacklight) !important;
+}
 .collapsing {
   display: block;
   background: var(--panelback);
@@ -303,6 +312,10 @@ margin-bottom:15px;
   text-align: center;
   text-decoration: none;
   color: var(--paneltext);
+}
+
+.companywebsitelight{
+  background-color: var(--compWebLight);
 }
 
 .companywebsite:hover{
