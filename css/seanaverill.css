@@ -21,6 +21,10 @@
 
 }
 
+.bg-yellow{
+  background-color: #eea425;
+}
+
 .pad_sides{
     padding-left: 10px;
     padding-right: 10px;
@@ -251,6 +255,10 @@ background: var(--panelbacklight) !important;
     text-decoration: none;
   }
 
+  .menuitem:focus{
+    text-decoration: none;
+  }
+
 
 
 button{
@@ -340,4 +348,32 @@ text-decoration: none;
 
 .link-icon{
   padding-right:5px;
+}
+
+
+/* Dev Section */
+
+.devSection{
+  width:80%;
+  margin: auto;
+  text-align: left;
+  margin-top: 200px;
+}
+
+.devHead{
+
+}
+
+/* Proj Section */
+
+.projSection{
+  width:80%;
+  margin: auto;
+  text-align: left;
+  margin-top: 200px;
+
+}
+
+.projHead{
+
 }
