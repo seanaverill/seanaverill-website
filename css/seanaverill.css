@@ -1,3 +1,20 @@
+:root {
+  --darkback: #141a48;
+  --darkpurple: #56068e;
+  --purplegrad:linear-gradient(72deg,#430371,#6a08b0);
+  --lightback:#d3d3d3;
+  --lightmodetext:#000;
+  --darkmodetext:#fff;
+  --lightaccent:#bada55;
+  --darkaccent:rgb(238, 164, 37);
+  --paneltext:#fff;
+  --paneltitle:#fff;
+  --switchcolor:#fff;
+  --headercolor: transparent;
+  --stickycolor:#ffffff1e;
+
+}
+
 .pad_sides{
     padding-left: 10px;
     padding-right: 10px;
@@ -5,18 +22,28 @@
 
 body{
     text-align:center;
-    background-color: rgb(20, 26, 72);
-    color: #fff;
+    background-color: var(--darkback);
+    color: var(--darkmodetext);
     }
 
 h1{
-    margin-top:30px;
     font-family: 'Inter';
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.subheading{
+  margin-top:10px;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
 }
 
 .introtext{
 width: 80%;
 margin: auto;
+margin-top:120px;
+margin-bottom:120px;
 text-align: left;
 padding-top: 60px;
 }
@@ -24,11 +51,13 @@ padding-top: 60px;
 /* Dark Mode  */
 
 .light{
-    background-color: rgb(211, 211, 211);
-    color:rgb(40, 40, 40);
+    background-color: var(--lightback);
+    color:var(--lightmodetext);
 }
 
-
+.lighttext{
+  color:var(--lightmodetext);
+}
 
 input[type=checkbox]{
         height: 10px;
@@ -41,7 +70,7 @@ label {
         text-indent: -9999px;
         width: 50px;
         height: 25px;
-        background: grey;
+        background: var(--darkaccent);
         display: block;
         border-radius: 100px;
         position: relative;
@@ -54,13 +83,13 @@ label:after {
         left: 3px;
         width: 20px;
         height: 20px;
-        background: #fff;
+        background: var(--switchcolor);
         border-radius: 20px;
         transition: 0.3s;
     }
     
 input:checked + label {
-        background: #bada55;
+        background: var(--lightaccent);
     }
     
 input:checked + label:after {
@@ -85,8 +114,9 @@ label:active:after {
   }
 
   .panel-design{
-background-color: aqua;
-color: #000;
+/* background-color: rgb(68, 20, 91); */
+color: var(--paneltext);
+border:0px;
   }
   @media(max-width:992px){
    .wrapper{
@@ -96,12 +126,13 @@ color: #000;
   .panel-heading {
     padding: 0;
       border:0;
-      background-color: rgb(165, 14, 202);
+      background-image: var(--purplegrad);
+      border-radius: 10px;
   }
   .panel-title>a, .panel-title>a:active{
       display:block;
       padding:15px;
-    color:rgb(255, 255, 255);
+    color:var(--paneltitle);
     font-size:16px;
     font-weight:bold;
       text-transform:uppercase;
@@ -110,8 +141,8 @@ color: #000;
       text-decoration:none;
   }
   .panel-heading  a:before {
-     font-family: 'Glyphicons Halflings';
-     content: "\e114";
+    font-family: "Font Awesome 5 Free";
+    content: "\f067";
      float: right;
      transition: all 0.5s;
   }
@@ -121,13 +152,40 @@ color: #000;
       transform: rotate(180deg);
   } 
 
+  .collapse.in {
+    display: block;
+    background: var(--darkpurple);
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.collapsing {
+  display: block;
+  background: var(--darkpurple);
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.panel{
+  background-color: transparent;
+}
+
+.panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body {
+  border-top: 0px;
+
+}
+
+.panel-group .panel {
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
 
 
 
   /* Style the header */
 .header {
     padding: 10px 16px;
-    background: #1eeb9d00;
+    background: var(--headercolor);
     height: 60px;
   }
 
@@ -136,7 +194,7 @@ color: #000;
     top:0;
     width: 100%;
     backdrop-filter: saturate(180%) blur(20px);
-    background: #7575752a;
+    background: var(--stickycolor);
   }
 
   .sticky + .content {
@@ -158,15 +216,24 @@ color: #000;
 
   }
 
-  .menudivider{
-    font-size: 26px;
-    color:rgb(255, 255, 255);
-    padding-left: 10px;
-    padding-right: 10px;
-    text-decoration: none;
-    font-family: 'Inter';
 
-  }
+button{
+  background-color: transparent;
+  border: none;
+}
 
- 
+.logo{
+  position: absolute;
+  left: 20px;
+  font-size: 26px;
+  letter-spacing: 3px;
+}
 
+
+/* Photo settings */
+
+.companyimage{
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+}

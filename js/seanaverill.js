@@ -1,20 +1,12 @@
 
 // Dark Mode Code
 function myFunction() {
-    var element = document.body;
+    let element = document.body;
+    let menuBar = document.getElementById('menu');
     element.classList.toggle("light");
+    menuBar.classList.toggle("lighttext");
     }
 
-
-/* Accordion Code
-$('.panel-collapse').on('show.bs.collapse', function () {
-    $(this).siblings('.panel-heading').addClass('active');
-  });
-
-  $('.panel-collapse').on('hide.bs.collapse', function () {
-    $(this).siblings('.panel-heading').removeClass('active');
-  });
-    */    
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {stickyFunc()};
@@ -33,3 +25,17 @@ function stickyFunc() {
     header.classList.remove("sticky");
   }
 }
+
+
+
+
+
+/* Accordion Code
+$('.panel-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+  });
+
+  $('.panel-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
+  });
+    */   
