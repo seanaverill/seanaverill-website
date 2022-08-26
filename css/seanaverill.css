@@ -258,7 +258,7 @@ button{
 }
 
 .descriptiontext{
-
+margin-bottom:15px;
 }
 
 .companywebsite{
@@ -268,6 +268,28 @@ button{
   padding: 5px 10px 5px 10px;
   width: 175px;
   text-align: center;
+  text-decoration: none;
+  color: var(--paneltext);
+}
+
+.companywebsite:hover{
+  color: var(--paneltext);
+text-decoration: none;
+}
+
+.companywebsite:active{
+  color: var(--paneltext);
+text-decoration: none;
+}
+
+.companywebsite:visited{
+  color: var(--paneltext);
+text-decoration: none;
+}
+
+.companywebsite:link{
+  color: var(--paneltext);
+text-decoration: none;
 }
 
 .link-icon{
