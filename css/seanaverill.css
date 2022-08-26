@@ -11,12 +11,14 @@ body{
 
 h1{
     margin-top:30px;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Inter';
 }
 
 .introtext{
 width: 80%;
 margin: auto;
+text-align: left;
+padding-top: 60px;
 }
  
 /* Dark Mode  */
@@ -72,8 +74,8 @@ label:active:after {
     
 .upperright{
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 8px;
+    right: -65px;
    }
 
 /* Accordion */
@@ -126,7 +128,7 @@ color: #000;
 .header {
     padding: 10px 16px;
     background: #1eeb9d00;
-    height: 80px;
+    height: 60px;
   }
 
   .sticky{
@@ -141,23 +143,28 @@ color: #000;
     padding-top: 300px;
   }
   
+.menu{
+    position: absolute;
+    right: 80px;
+}
+
   .menuitem{
-    font-size: 36px;
-    color:rgb(76, 255, 252);
+    font-size: 26px;
+    text-transform: uppercase;
     padding-left: 10px;
     padding-right: 10px;
     text-decoration: none;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Inter';
 
   }
 
   .menudivider{
-    font-size: 36px;
+    font-size: 26px;
     color:rgb(255, 255, 255);
     padding-left: 10px;
     padding-right: 10px;
     text-decoration: none;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Inter';
 
   }
 

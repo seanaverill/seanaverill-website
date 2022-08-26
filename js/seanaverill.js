@@ -6,7 +6,7 @@ function myFunction() {
     }
 
 
-// Accordion Code
+/* Accordion Code
 $('.panel-collapse').on('show.bs.collapse', function () {
     $(this).siblings('.panel-heading').addClass('active');
   });
@@ -14,7 +14,7 @@ $('.panel-collapse').on('show.bs.collapse', function () {
   $('.panel-collapse').on('hide.bs.collapse', function () {
     $(this).siblings('.panel-heading').removeClass('active');
   });
-        
+    */    
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {stickyFunc()};
