@@ -2,9 +2,15 @@
 // Dark Mode Code
 function myFunction() {
     let element = document.body;
-    let menuBar = document.getElementById('menu');
+    let mItem1 = document.getElementById('mItem1');
+    let mItem2 = document.getElementById('mItem2');
+    let mItem3 = document.getElementById('mItem3');
+    let logo = document.getElementById('logo');
     element.classList.toggle("light");
-    menuBar.classList.toggle("lighttext");
+    mItem1.classList.toggle("lightbutton");
+    mItem2.classList.toggle("lightbutton");
+    mItem3.classList.toggle("lightbutton");
+    logo.classList.toggle("lightbutton");
     }
 
 

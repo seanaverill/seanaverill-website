@@ -4,6 +4,7 @@
   --lightpurple:#7b1fbd;
   --purplegrad:linear-gradient(72deg,#430371,#6a08b0);
   --lightback:#d3d3d3;
+  --lighthover:rgb(91, 91, 91);
   --lightmodetext:#000;
   --darkmodetext:#fff;
   --lightaccent:#bada55;
@@ -44,7 +45,7 @@ h1{
 width: 80%;
 margin: auto;
 margin-top:120px;
-margin-bottom:120px;
+margin-bottom:240px;
 text-align: left;
 padding-top: 60px;
 }
@@ -57,7 +58,14 @@ padding-top: 60px;
 }
 
 .lighttext{
-  color:var(--lightmodetext);
+  color:var(--lightmodetext)!important;
+}
+
+.lightbutton{
+  color:var(--lightmodetext)!important;
+}
+.lightbutton:hover{
+  color:var(--lighthover)!important;
 }
 
 input[type=checkbox]{
@@ -69,8 +77,8 @@ input[type=checkbox]{
 label {
         cursor: pointer;
         text-indent: -9999px;
-        width: 50px;
-        height: 25px;
+        width: 34px;
+        height: 20px;
         background: var(--darkaccent);
         display: block;
         border-radius: 100px;
@@ -80,10 +88,10 @@ label {
 label:after {
         content: '';
         position: absolute;
-        top: 2.5px;
-        left: 3px;
-        width: 20px;
-        height: 20px;
+        top: 2px;
+        left: 2px;
+        width: 16px;
+        height: 16px;
         background: var(--switchcolor);
         border-radius: 20px;
         transition: 0.3s;
@@ -99,13 +107,13 @@ input:checked + label:after {
     }
     
 label:active:after {
-        width: 40px;
+        width: 30px;
     }
     
 .upperright{
-    position: absolute;
-    top: 8px;
-    right: -65px;
+  position: absolute;
+  top: 5px;
+  right: -55px;
    }
 
 /* Accordion */
@@ -185,7 +193,7 @@ border:0px;
 
   /* Style the header */
 .header {
-    padding: 10px 16px;
+    padding: 15px 16px;
     background: var(--headercolor);
     height: 60px;
   }
@@ -208,14 +216,31 @@ border:0px;
 }
 
   .menuitem{
-    font-size: 26px;
+    font-size: 22px;
     text-transform: uppercase;
     padding-left: 10px;
     padding-right: 10px;
     text-decoration: none;
     font-family: 'Inter';
+    color: var(--darkmodetext);
+    letter-spacing: 2px;
 
   }
+
+  .menuitem:hover{
+    text-decoration: none;
+    color:var(--darkaccent)
+  }
+
+  .menuitem:active{
+    text-decoration: none;
+    color:var(--darkaccent)
+  }
+
+  .menuitem:visited{
+    text-decoration: none;
+  }
+
 
 
 button{
@@ -226,9 +251,16 @@ button{
 .logo{
   position: absolute;
   left: 20px;
-  font-size: 26px;
+  font-size: 22px;
   letter-spacing: 3px;
+  text-decoration: none;
+  color:var(--darkmodetext);
 }
+.logo:hover{
+  text-decoration: none;
+  color:var(--darkaccent);
+}
+
 
 
 /* Photo settings */
