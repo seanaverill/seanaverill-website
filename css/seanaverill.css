@@ -1,14 +1,15 @@
 :root {
   --darkback: #141a48;
-  --darkpurple: #56068e;
-  --lightpurple:#7b1fbd;
-  --purplegrad:linear-gradient(72deg,#430371,#6a08b0);
+  --panelback: #22295d;
+  --companylinkback:#3a4280;
+  --companylinktext:#fff;
+  --paneltitleback:#3a4280;
   --lightback:#d3d3d3;
   --lighthover:rgb(91, 91, 91);
   --lightmodetext:#000;
   --darkmodetext:#fff;
   --lightaccent:#bada55;
-  --darkaccent:rgb(238, 164, 37);
+  --darkaccent:#eea425;
   --paneltext:#fff;
   --paneltitle:#fff;
   --switchcolor:#fff;
@@ -135,7 +136,7 @@ border:0px;
   .panel-heading {
     padding: 0;
       border:0;
-      background-image: var(--purplegrad);
+      background: var(--paneltitleback);
       border-radius: 10px;
   }
   .panel-title>a, .panel-title>a:active{
@@ -163,14 +164,14 @@ border:0px;
 
   .collapse.in {
     display: block;
-    background: var(--darkpurple);
+    background: var(--panelback);
     margin-top: 10px;
     border-radius: 10px;
 }
 
 .collapsing {
   display: block;
-  background: var(--darkpurple);
+  background: var(--panelback);
   margin-top: 10px;
   border-radius: 10px;
 }
@@ -296,7 +297,7 @@ margin-bottom:15px;
 .companywebsite{
   margin-top: 10px;
   border-radius: 10px;
-  background-color: var(--lightpurple);
+  background-color: var(--companylinkback);
   padding: 5px 10px 5px 10px;
   width: 175px;
   text-align: center;
@@ -305,22 +306,22 @@ margin-bottom:15px;
 }
 
 .companywebsite:hover{
-  color: var(--paneltext);
+  color: var(--companylinktext);
 text-decoration: none;
 }
 
 .companywebsite:active{
-  color: var(--paneltext);
+  color: var(--companylinktext);
 text-decoration: none;
 }
 
 .companywebsite:visited{
-  color: var(--paneltext);
+  color: var(--companylinktext);
 text-decoration: none;
 }
 
 .companywebsite:link{
-  color: var(--paneltext);
+  color: var(--companylinktext);
 text-decoration: none;
 }
 
