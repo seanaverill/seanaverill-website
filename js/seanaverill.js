@@ -67,3 +67,17 @@ $('.panel-collapse').on('show.bs.collapse', function () {
     $(this).siblings('.panel-heading').removeClass('active');
   });
     */   
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
+// Cards

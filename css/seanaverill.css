@@ -219,6 +219,7 @@ background: var(--panelbacklight) !important;
     position: fixed;
     top:0;
     width: 100%;
+    z-index: 2;
     backdrop-filter: saturate(180%) blur(20px);
     background: var(--stickycolor);
   }
@@ -422,6 +423,7 @@ text-decoration: none;
   width: 5px;
   height: 5px;
   background-color: #fff;
+  z-index:1;
   border-radius: 50%;
   -webkit-animation: scroll-icon 2.2s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
           animation: scroll-icon 2.2s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
@@ -454,3 +456,7 @@ text-decoration: none;
     opacity: 0;
   }
 }
+
+
+
+/*  Cards   */
