@@ -299,8 +299,7 @@ button{
 /* Photo settings */
 
 .companyimage{
-  width: 150px;
-  padding: 10px;
+  width: 100%;
   border-radius: 26px;
 }
 
@@ -311,7 +310,7 @@ button{
   text-align: left;
 }
 
-.titlecomp{
+.titlegrid{
   grid-template-columns: auto 62px 50px auto 5%;
   width: 100%;
   display: grid;
@@ -320,7 +319,7 @@ button{
 
 .jobtitle{
   text-align: left;
-  padding-left: 20px;
+  justify-self: start;
   float: left;
   grid-column: 1 / span 3;
   grid-row: 1 / span 1;
@@ -328,7 +327,7 @@ button{
 
 .companyname{
   text-align: left;
-  padding-left: 20px;
+  justify-self: start;
 font-weight: 200;
 padding-top: 2px;
 grid-column: 1 / span 3;
@@ -336,7 +335,6 @@ grid-row: 2 / span 1;
 }
 
 .jobdate{
-  padding-right: 35px;
   grid-column: 4 / span 1;
   grid-row: 1 / span 2;
 justify-self: end;
@@ -347,6 +345,35 @@ justify-self: end;
   grid-row: 1 / span 2;
   justify-self: end;
 }
+
+.panelgrid{
+  grid-template-columns: 25% auto;
+  width: 100%;
+  display: grid;
+  align-items: center;
+}
+
+.imageitem{
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+justify-self: start;
+align-self: start;
+padding-right: 20px;
+}
+.descriptionitem{
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+justify-self: start;
+text-align: left;
+padding-bottom: 20px;
+}
+.websiteitem{
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+justify-self: start;
+}
+
+
 
 
 .descriptiontext{
