@@ -30,6 +30,9 @@
   --width-container: 1200px;
   --box-size:  100%;
 
+  --headerphone:12px;
+  --headertablet:16px;
+  --headerdesktop:22px;
 }
 
 .bg-yellow{
@@ -245,7 +248,7 @@ background: var(--panelbacklight) !important;
 }
 
   .menuitem{
-    font-size: 22px;
+    font-size: var(--headerphone);
     text-transform: uppercase;
     padding-left: 10px;
     padding-right: 10px;
@@ -284,7 +287,7 @@ button{
 .logo{
   position: absolute;
   left: 20px;
-  font-size: 22px;
+  font-size: var(--headerphone);
   letter-spacing: 3px;
   text-decoration: none;
   color:var(--darkmodetext);
@@ -569,6 +572,12 @@ body{
   .panel-title>a, .panel-title>a:active{
     font-size: 14px;
   }
+  .menuitem{
+    font-size:var(--headertablet);
+  }
+  .logo{
+    font-size:var(--headertablet);
+  }
 }
 
 @media(min-width: 960px){
@@ -577,6 +586,12 @@ body{
   }
   .panel-title>a, .panel-title>a:active{
     font-size: 16px;
+  }
+  .menuitem{
+    font-size:var(--headerdesktop);
+  }
+  .logo{
+    font-size:var(--headerdesktop);
   }
 }
 
