@@ -249,10 +249,11 @@ background: var(--panelbacklight) !important;
 
 .headergrid{
 display: grid;
-grid-template-columns: 25% auto 10% 10% 10% 5%;
+grid-template-columns: 25% auto 60px 60px 60px 45px;
 align-items: center;
 justify-items: start;
 }
+
 
   .menuitem{
     font-size: var(--headerphone);
@@ -268,6 +269,7 @@ justify-items: start;
   .logoitem{
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
+    text-align: left;
   }
 
   .menuitem1{
@@ -611,6 +613,10 @@ body{
   .logo{
     font-size:var(--headertablet);
   }
+  .headergrid{
+    grid-template-columns: 25% auto 80px 80px 80px 45px;
+    }
+
 }
 
 @media(min-width: 960px){
@@ -626,6 +632,9 @@ body{
   .logo{
     font-size:var(--headerdesktop);
   }
+  .headergrid{
+    grid-template-columns: 25% auto 100px 100px 100px 45px;
+    }
 }
 
 .card{
