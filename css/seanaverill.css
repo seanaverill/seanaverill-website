@@ -168,20 +168,19 @@ border:0px;
       display:block;
       padding:15px;
     color:var(--paneltitle);
-    font-size:12px;
+    font-size:10px;
     font-weight:bold;
       text-transform:uppercase;
       letter-spacing:1px;
     word-spacing:3px;
       text-decoration:none;
   }
-  .panel-heading  a:before {
+  /*.panel-heading  a:before {
     font-family: "Font Awesome 5 Free";
     content: "\f067";
      float: right;
      transition: all 0.5s;
-     line-height: 200%;
-  }
+  }*/
   .panel-heading.active a:before {
       -webkit-transform: rotate(180deg);
       -moz-transform: rotate(180deg);
@@ -312,10 +311,19 @@ button{
   text-align: left;
 }
 
+.titlecomp{
+  grid-template-columns: auto 62px 50px auto 5%;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  }
+
 .jobtitle{
   text-align: left;
   padding-left: 20px;
   float: left;
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 1;
 }
 
 .companyname{
@@ -323,17 +331,23 @@ button{
   padding-left: 20px;
 font-weight: 200;
 padding-top: 2px;
-}
-
-.titlecomp{
-float: left;
+grid-column: 1 / span 3;
+grid-row: 2 / span 1;
 }
 
 .jobdate{
-  text-align: right;
   padding-right: 35px;
-  line-height:200%;
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 2;
+justify-self: end;
 }
+
+.plusitem{
+  grid-column: 5 / span 1;
+  grid-row: 1 / span 2;
+  justify-self: end;
+}
+
 
 .descriptiontext{
 margin-bottom:15px;
