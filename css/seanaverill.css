@@ -180,6 +180,7 @@ border:0px;
     content: "\f067";
      float: right;
      transition: all 0.5s;
+     line-height: 200%;
   }
   .panel-heading.active a:before {
       -webkit-transform: rotate(180deg);
@@ -324,9 +325,14 @@ font-weight: 200;
 padding-top: 2px;
 }
 
+.titlecomp{
+float: left;
+}
+
 .jobdate{
   text-align: right;
   padding-right: 35px;
+  line-height:200%;
 }
 
 .descriptiontext{
