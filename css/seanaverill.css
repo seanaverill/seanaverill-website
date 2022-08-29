@@ -168,7 +168,7 @@ border:0px;
       display:block;
       padding:15px;
     color:var(--paneltitle);
-    font-size:16px;
+    font-size:8px;
     font-weight:bold;
       text-transform:uppercase;
       letter-spacing:1px;
@@ -512,11 +512,17 @@ body{
   .card-grid{
     grid-template-columns: repeat(2, 1fr); 
   }
+  .panel-title>a, .panel-title>a:active{
+    font-size: 10px;
+  }
 }
 
 @media(min-width: 960px){
   .card-grid{
     grid-template-columns: repeat(4, 1fr); 
+  }
+  .panel-title>a, .panel-title>a:active{
+    font-size: 16px;
   }
 }
 
