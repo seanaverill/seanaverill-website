@@ -28,6 +28,7 @@
   --spacing-xl: 32px;
   --spacing-xxl: 64px;
   --width-container: 1200px;
+  --box-size:  100%;
 
 }
 
@@ -493,9 +494,9 @@ body{
   align-items: flex-start;
   background: var(--cardsectionback);
   display: flex;
-  min-height: 100%;
+  min-height: 50px;
   justify-content: center;
-  padding: var(--spacing-xxl) var(--spacing-l);
+  padding: 20px 0px;
 }
 
 .card-grid{
@@ -527,7 +528,7 @@ body{
 .card:before{
   content: '';
   display: block;
-  padding-bottom: 150%;
+  padding-bottom: var(--box-size);
   width: 100%;
 }
 
@@ -536,13 +537,13 @@ body{
   background-position: center;
   border-radius: var(--spacing-l);
   bottom: 0;
-  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  filter: brightness(0.6) saturate(1.2) contrast(0.7);
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
   transform-origin: center;
-  trsnsform: scale(1) translateZ(0);
+  transform: scale(1) translateZ(0);
   transition: 
     filter 200ms linear,
     transform 200ms linear;
@@ -553,14 +554,14 @@ body{
 }
 
 .card-grid:hover > .card:not(:hover) .card__background{
-  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(4px);
 }
 
 .card__content{
   left: 0;
   padding: var(--spacing-l);
   position: absolute;
-  top: 0;
+  top: 18%;
 }
 
 .card__category{
@@ -576,4 +577,5 @@ body{
   text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
   line-height: 1.4;
   word-spacing: 100vw;
+  text-align: left;
 }
