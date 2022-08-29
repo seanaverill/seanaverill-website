@@ -134,14 +134,14 @@ input:checked + label:after {
 label:active:after {
         width: 30px;
     }
-    
+ /*   
 .upperright{
   position: absolute;
   top: 5px;
   right: -55px;
    }
 
-/* Accordion */
+ Accordion */
 
   .wrapper{
     width:60%;
@@ -247,6 +247,13 @@ background: var(--panelbacklight) !important;
     right: 80px;
 }
 
+.headergrid{
+display: grid;
+grid-template-columns: 25% auto 10% 10% 10% 5%;
+align-items: center;
+justify-items: start;
+}
+
   .menuitem{
     font-size: var(--headerphone);
     text-transform: uppercase;
@@ -256,7 +263,35 @@ background: var(--panelbacklight) !important;
     font-family: 'Inter';
     color: var(--darkmodetext);
     letter-spacing: 2px;
+  }
 
+  .logoitem{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  .menuitem1{
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+  }
+  .menuitem2{
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+
+  }
+  .menuitem3{
+    grid-column: 5 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+
+  }
+  .switchitem{
+    grid-column: 6 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+margin-top: -15px;
   }
 
   .menuitem:hover{
@@ -285,8 +320,6 @@ button{
 }
 
 .logo{
-  position: absolute;
-  left: 20px;
   font-size: var(--headerphone);
   letter-spacing: 3px;
   text-decoration: none;
