@@ -223,6 +223,7 @@ background: var(--panelbacklight) !important;
 
 
   /* Style the header */
+  
 .header {
     padding: 15px 16px;
     background: var(--headercolor);
@@ -242,6 +243,12 @@ background: var(--panelbacklight) !important;
     padding-top: 300px;
   }
   
+ .careeranchor{
+margin-top:-250px
+  }
+
+
+
 .menu{
     position: absolute;
     right: 80px;
