@@ -33,6 +33,20 @@ function myFunction() {
     }
 
 
+// Social Slide Out Code
+function sliderFunc() {
+  let socialslide = document.getElementById('slider');
+  socialslide.classList.toggle("slideout");
+
+  let slidearrow = document.getElementById('slidearrow');
+  slidearrow.classList.toggle("slidearrow");
+  
+
+
+  }
+
+
+
    
 
 
