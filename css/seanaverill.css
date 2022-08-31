@@ -50,6 +50,19 @@ body{
     color: var(--darkmodetext);
     }
 
+    li{
+      /*list-style-type: circle;*/
+      padding-bottom: 5px;
+
+    }
+
+    /* li:before { 
+      content: '\1F95E'; 
+      margin-left: -20px; 
+      margin-right: 5px; 
+      list-style-position: outside;
+    } */
+
 h1{
     font-family: 'Inter';
     font-weight: 700;
@@ -282,12 +295,12 @@ justify-items: start;
   .menuitem1{
     grid-column: 3 / span 1;
     grid-row: 1 / span 1;
-    justify-self: center;
+    justify-self: end;
   }
   .menuitem2{
     grid-column: 4 / span 1;
     grid-row: 1 / span 1;
-    justify-self: center;
+    justify-self: end;
 
   }
   .menuitem3{
@@ -411,6 +424,7 @@ padding-right: 20px;
 justify-self: start;
 text-align: left;
 padding-bottom: 20px;
+padding-left: 10px;
 }
 .websiteitem{
   grid-column: 2 / span 1;
