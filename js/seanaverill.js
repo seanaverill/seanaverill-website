@@ -30,6 +30,13 @@ function myFunction() {
       companywebsite.classList.toggle('companywebsitelight');
     }
 
+    // Social Links
+    const darkicons = document.querySelectorAll('.darkicons');
+    for (const lighticons of darkicons) {
+      lighticons.classList.toggle('lighticons');
+    }
+
+
     }
 
 
