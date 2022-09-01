@@ -10,6 +10,14 @@
 
 <h1>Setup Local Development</h1>
 
+## VSCode Option
+
+Install the <b>Live Server</b> extension found within VSCode. It can also be found <a href="https://github.com/ritwickdey/vscode-live-server-plus-plus">here</a>.
+
+You can right click on the index file and click "Open with Live Server" to test in your local environment.
+
+Should you wish to setup a <b>Jekyll</b> environment please follow the instructions below.
+
 ## Jekyll
 
 Go to <a href="https://jekyllrb.com/docs/installation/">Jekyll</a>'s website to see detailed installation instructions for your operating system.
