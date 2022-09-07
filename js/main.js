@@ -4,23 +4,20 @@ import {FBXLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm
 import {GLTFLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/GLTFLoader.js';
 import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three@0.118/examples/jsm/controls/OrbitControls.js';
 
-
-
-
-
 class LoadModelDemo {
   constructor() {
     this._Initialize();
   }
 
   _Initialize() {
+    //Create WebGL Render
     this._threejs = new THREE.WebGLRenderer({
       antialias: true,
     });
-    this._threejs.shadowMap.enabled = true;
-    this._threejs.shadowMap.type = THREE.PCFSoftShadowMap;
+
+    //Sets Size and Pixel Ratio
     this._threejs.setPixelRatio(window.devicePixelRatio);
-    this._threejs.setSize(window.innerWidth, window.innerHeight);
+    this._threejs.setSize(window.innerWidth/2, window.innerHeight/2);
 
     document.body.appendChild(this._threejs.domElement);
 
@@ -28,37 +25,47 @@ class LoadModelDemo {
       this._OnWindowResize();
     }, false);
 
+    //Camera Setup
     const fov = 20;
     const aspect = 1920 / 1080;
     const near = 1.0;
     const far = 1000.0;
     this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    this._camera.position.set(150, 100, 0);
+    this._camera.position.set(30, 30, 45);
 
+    //Create Scene
     this._scene = new THREE.Scene();
 
+    //Background
     this._scene.background = new THREE.Color("rgb(20, 40, 72)");
-    //var renderer = new THREE.WebGLRenderer( {alpha: true } );
-    // You can leave the clear color at the defaultvalue.
-    //renderer.setClearColor( 0x000000, 0 ); //default
+    
 
-
-
-    let light = new THREE.AmbientLight(0xFFFFFF, 1.0);
+    //Directional Light
+    let light = new THREE.DirectionalLight( 0xffffff, 1.5 );
+    light.position.set( 10, 50, 10 );
+    light.target.position.set(-5, 2.5, -5);
     this._scene.add(light);
 
+    //Hemisphere Light
+    let hemilight = new THREE.HemisphereLight( 0xffffbb, 0x080820, .3 );
+    this._scene.add(hemilight);
+
+    //Orbit Controls
     const controls = new OrbitControls(
       this._camera, this._threejs.domElement);
-    controls.target.set(0, 20, 0);
+    controls.target.set(-5, 2.5, -5);
     controls.update();
 
-
-
-
-
-
+    //Run Animaiton
     this._LoadAnimatedModel();
     this._RAF();
+  }
+
+
+  _OnWindowResize() {
+    this._camera.aspect = window.innerWidth / window.innerHeight;
+    this._camera.updateProjectionMatrix();
+    this._threejs.setSize(window.innerWidth/2, window.innerHeight/2);
   }
 
   _LoadAnimatedModel() {
