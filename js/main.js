@@ -22,7 +22,7 @@ class LoadModelDemo {
 
     //Sets Size and Pixel Ratio
     this._threejs.setPixelRatio(window.devicePixelRatio);
-    this._threejs.setSize(500,500); //window.innerWidth, window.innerHeight
+    this._threejs.setSize(window.innerWidth/2, window.innerHeight/2); //window.innerWidth, window.innerHeight
 
     container.appendChild(this._threejs.domElement);
 
