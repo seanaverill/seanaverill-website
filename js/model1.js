@@ -12,7 +12,9 @@ class LoadModelDemo {
   _Initialize() {
 
     const container = document.getElementById("threejscontainer");
-
+    //const canvas = document.querySelector("#c");
+    //canvas.width = 400;
+    //canvas.height = 300;
 
     //Create WebGL Render
     this._threejs = new THREE.WebGLRenderer({
@@ -21,8 +23,8 @@ class LoadModelDemo {
     });
 
     //Sets Size and Pixel Ratio
-    this._threejs.setPixelRatio(window.devicePixelRatio);
-    this._threejs.setSize(window.innerWidth/2, window.innerHeight/2); //window.innerWidth, window.innerHeight
+    //this._threejs.setPixelRatio(window.devicePixelRatio);
+    this._threejs.setSize(window.innerWidth/3, window.innerWidth/3); //window.innerWidth, window.innerHeight
 
     container.appendChild(this._threejs.domElement);
 
@@ -31,12 +33,15 @@ class LoadModelDemo {
     }, false);
 
     //Camera Setup
-    const fov = 15;
-    const aspect = 1920 / 1080;
+    //const fov = 5;
+    //const aspect = 1920 / 1080;
     const near = 1.0;
-    const far = 1000.0;
-    this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    this._camera.position.set(30, 30, 45);
+    const far = 20.0;
+    const width = 5;
+    const height = 5;
+    //this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+    this._camera = new THREE.OrthographicCamera( width / - 2, width / 2, height / 2, height / - 2, near, far );
+    this._camera.position.set(3, 1, 3);
 
     //Create Scene
     this._scene = new THREE.Scene();
@@ -46,19 +51,23 @@ class LoadModelDemo {
 
 
     //Directional Light
-    let light = new THREE.DirectionalLight( 0xffffff, 1.5 );
+    let light = new THREE.DirectionalLight( 0xffffff, 2.5 );
     light.position.set( 10, 50, 10 );
-    light.target.position.set(-5, 2.5, -5);
+    light.target.position.set(0, 0, 0);
     this._scene.add(light);
 
     //Hemisphere Light
-    let hemilight = new THREE.HemisphereLight( 0xffffbb, 0x080820, .3 );
+    let hemilight = new THREE.HemisphereLight( 0xffffbb, 0x080820, .5 );
     this._scene.add(hemilight);
+
+    //Ambient Light
+    let amblight = new THREE.AmbientLight( 0x404040, 1);
+    this._scene.add(amblight);
 
     //Orbit Controls
     const controls = new OrbitControls(
       this._camera, this._threejs.domElement);
-    controls.target.set(-5, 2.5, -5);
+    controls.target.set(0, 0.5, 0);
     controls.update();
 
     //Run Animaiton
@@ -68,15 +77,15 @@ class LoadModelDemo {
 
 
   _OnWindowResize() {
-    this._camera.aspect = window.innerWidth / window.innerHeight;
+    this._camera.aspect = 500 / 500;
     this._camera.updateProjectionMatrix();
-    this._threejs.setSize(window.innerWidth/2, window.innerHeight/2);
+    this._threejs.setSize(window.innerWidth/3, window.innerWidth/3);
   }
 
   _LoadAnimatedModel() {
     const loader = new GLTFLoader();
     loader.setPath('./resources/');
-    loader.load('House_Still_Privacy.glb', (gltf) => {
+    loader.load('porsche959.glb', (gltf) => {
    
 
       const params = {

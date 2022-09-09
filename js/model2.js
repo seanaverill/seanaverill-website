@@ -67,7 +67,7 @@ class LoadModelDemo {
     //Orbit Controls
     const controls = new OrbitControls(
       this._camera, this._threejs.domElement);
-    controls.target.set(0, 0.5, 0);
+    controls.target.set(0, 1, 0);
     controls.update();
 
     //Run Animaiton
@@ -85,7 +85,7 @@ class LoadModelDemo {
   _LoadAnimatedModel() {
     const loader = new GLTFLoader();
     loader.setPath('./resources/');
-    loader.load('porsche959.glb', (gltf) => {
+    loader.load('car1.glb', (gltf) => {
    
 
       const params = {

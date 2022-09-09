@@ -36,6 +36,13 @@ function myFunction() {
       lighticons.classList.toggle('lighticons');
     }
 
+    
+    // Portfolio Background
+    const darkportfolio = document.querySelectorAll('.modelgrid');
+    for (const lightportfolio of darkportfolio) {
+      lightportfolio.classList.toggle('lightportfolio');
+    }
+
 
     }
 
