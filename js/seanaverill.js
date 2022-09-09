@@ -48,13 +48,7 @@ function sliderFunc() {
   let slidearrow = document.getElementById('slidearrow');
   slidearrow.classList.toggle("slidearrow");
   
-
-
   }
-
-
-
-   
 
 
 // When the user scrolls the page, execute myFunction
@@ -64,7 +58,7 @@ window.onscroll = function() {stickyFunc()};
 var header = document.getElementById("myHeader");
 
 // Get the offset position of the navbar
-var sticky = header.offsetTop;
+//var sticky = header.offsetTop;
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyFunc() {

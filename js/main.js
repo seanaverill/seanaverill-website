@@ -1,6 +1,6 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.118/build/three.module.js';
 
-import {FBXLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/FBXLoader.js';
+//import {FBXLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/FBXLoader.js';
 import {GLTFLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/GLTFLoader.js';
 import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three@0.118/examples/jsm/controls/OrbitControls.js';
 
@@ -10,23 +10,28 @@ class LoadModelDemo {
   }
 
   _Initialize() {
+
+    const container = document.getElementById("threejscontainer");
+
+
     //Create WebGL Render
     this._threejs = new THREE.WebGLRenderer({
       antialias: true,
+      alpha: true,
     });
 
     //Sets Size and Pixel Ratio
     this._threejs.setPixelRatio(window.devicePixelRatio);
-    this._threejs.setSize(window.innerWidth/2, window.innerHeight/2);
+    this._threejs.setSize(500,500); //window.innerWidth, window.innerHeight
 
-    document.body.appendChild(this._threejs.domElement);
+    container.appendChild(this._threejs.domElement);
 
     window.addEventListener('resize', () => {
       this._OnWindowResize();
     }, false);
 
     //Camera Setup
-    const fov = 20;
+    const fov = 15;
     const aspect = 1920 / 1080;
     const near = 1.0;
     const far = 1000.0;
@@ -37,8 +42,8 @@ class LoadModelDemo {
     this._scene = new THREE.Scene();
 
     //Background
-    this._scene.background = new THREE.Color("rgb(20, 40, 72)");
-    
+    //this._scene.background = new THREE.Color("rgb(20, 40, 72)");
+
 
     //Directional Light
     let light = new THREE.DirectionalLight( 0xffffff, 1.5 );

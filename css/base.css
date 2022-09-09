@@ -8,3 +8,8 @@ body {
     overscroll-behavior: none;
   }
 
+.threejscontainer{
+position: absolute;
+display: block;
+left: 50px;
+  }
