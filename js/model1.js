@@ -36,12 +36,12 @@ class LoadModelDemo {
     //const fov = 5;
     //const aspect = 1920 / 1080;
     const near = 1.0;
-    const far = 20.0;
-    const width = 5;
-    const height = 5;
+    const far = 80.0;
+    const width = 50;
+    const height = 50;
     //this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
     this._camera = new THREE.OrthographicCamera( width / - 2, width / 2, height / 2, height / - 2, near, far );
-    this._camera.position.set(3, 1, 3);
+    this._camera.position.set(-60, 5, 40);
 
     //Create Scene
     this._scene = new THREE.Scene();
@@ -67,7 +67,7 @@ class LoadModelDemo {
     //Orbit Controls
     const controls = new OrbitControls(
       this._camera, this._threejs.domElement);
-    controls.target.set(0, 0.5, 0);
+    controls.target.set(-15, 0, 0);
     controls.update();
 
     //Run Animaiton
@@ -85,7 +85,7 @@ class LoadModelDemo {
   _LoadAnimatedModel() {
     const loader = new GLTFLoader();
     loader.setPath('./resources/');
-    loader.load('porsche959.glb', (gltf) => {
+    loader.load('pod.glb', (gltf) => {
    
 
       const params = {
