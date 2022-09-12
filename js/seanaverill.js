@@ -38,7 +38,7 @@ function myFunction() {
 
     
     // Portfolio Background
-    const darkportfolio = document.querySelectorAll('.modelgrid');
+    const darkportfolio = document.querySelectorAll('.sectionback');
     for (const lightportfolio of darkportfolio) {
       lightportfolio.classList.toggle('lightportfolio');
     }

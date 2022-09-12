@@ -25,12 +25,16 @@ display:grid;
 grid-template-columns: 50% auto;
 align-items: center;
 justify-items: center;
-width: 80%;
-margin: auto;
-background-color: var(--panelback);
-border-radius: 13px;
 margin-top: 50px;
   }
+
+
+.sectionback{
+  width: 80%;
+margin: 50px auto 0px auto;
+background-color: var(--panelback);
+border-radius: 13px;
+}
 
   .lightportfolio{
     background-color: var(--portfoliolight);
@@ -80,17 +84,12 @@ margin-top: 50px;
   }
 
 .gallerybox{
-  background-color: var(--panelback);
-  border-radius: 13px;
-  margin-top: 50px;
-  width: 80%;
-  margin: auto;
-  margin-top: 20px;
+  margin-top: 20px !important;
   padding:20px 10px;
 }
 
 .gallerytitle{
-width: 80%;
+width: 90%;
 text-align: left;
 margin: auto;
 padding:0px 10px;
@@ -104,13 +103,13 @@ padding:0px 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   padding: 10px;
 }
 .gallery-item {
   flex-basis: 32.7%;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   opacity: .85;
   cursor: pointer;
   height: 200px;
@@ -147,7 +146,6 @@ padding:0px 10px;
 .lightbox-content img {
   border-radius: 7px;
   box-shadow: 0 0 3px 0 rgba(225, 225, 225, .25);
-
   height: 100%;
   object-fit: fill;
 }
@@ -198,3 +196,6 @@ padding:0px 10px;
 }
 
 
+.spacer{
+  height: 20px;
+}
