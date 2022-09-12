@@ -43,26 +43,37 @@ class LoadModelDemo {
     this._camera = new THREE.OrthographicCamera( width / - 2, width / 2, height / 2, height / - 2, near, far );
     this._camera.position.set(-40, 20, -40);
 
-    //Create Scene
+    //Create Scene -40, 20, -40
     this._scene = new THREE.Scene();
 
     //Background
     //this._scene.background = new THREE.Color("rgb(20, 40, 72)");
 
 
-    //Directional Light
-    let light = new THREE.DirectionalLight( 0xffffff, 2.5 );
-    light.position.set( 10, 50, 10 );
+    //Directional Light 1
+    let light = new THREE.DirectionalLight( 0xffffff, 1.5 );
+    light.position.set( -41, 25, -41 );
     light.target.position.set(0, 0, 0);
     this._scene.add(light);
 
+    //Directional Light 2
+    let light2 = new THREE.DirectionalLight( 0xffffff, 0.75 );
+    light2.position.set(60, 25, -41);
+    light2.target.position.set(0, 0, 0);
+    this._scene.add(light2);
+    
+
     //Hemisphere Light
+    /*
     let hemilight = new THREE.HemisphereLight( 0xffffbb, 0x080820, .5 );
     this._scene.add(hemilight);
+    */
 
     //Ambient Light
+    /*
     let amblight = new THREE.AmbientLight( 0x404040, 1);
     this._scene.add(amblight);
+    */
 
     //Orbit Controls
     const controls = new OrbitControls(
