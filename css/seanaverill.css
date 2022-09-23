@@ -490,34 +490,22 @@ text-decoration: none;
   margin-top: 200px;
 }
 
-.careerHead{
 
-}
-/* Dev Section */
+/* Portfolio Section */
 
-.devSection{
-  width:80%;
-  margin: auto;
-  text-align: left;
-  margin-top: 200px;
-}
-
-.devHead{
-
-}
-
-/* Proj Section */
-
-.projSection{
+.portfolioSection{
   width:80%;
   margin: auto;
   text-align: left;
   margin-top: 100px;
-
 }
 
-.projHead{
+.wrapper + .portfolioSection{
+  margin-top: 200px;
+}
 
+.portfolioSection:not(:has(+ .portfolioSection)){
+  padding-bottom: 100px;
 }
 
 
