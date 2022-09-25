@@ -44,6 +44,16 @@ function myFunction() {
     }
 
 
+    
+
+
+        // Portfolio Border
+        const darkportborder = document.querySelectorAll('p');
+        for (const lightportborder of darkportborder) {
+          lightportborder.classList.toggle('lightcont2');
+        }
+
+
     }
 
 

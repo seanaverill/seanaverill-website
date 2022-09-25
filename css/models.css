@@ -26,6 +26,7 @@ grid-template-columns: 50% auto;
 align-items: center;
 justify-items: center;
 margin-top: 50px;
+padding-bottom: 20px;
   }
 
 
@@ -38,13 +39,15 @@ border-radius: 13px;
 
   .lightportfolio{
     background-color: var(--portfoliolight);
-
   }
 
+  .lightcont2{
+  border-color: #000 !important;
+  }
 
   .cont1{
     grid-column: 1 / span 1;
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 4;
   }
   .cont2{
     grid-column: 2 / span 1;
@@ -60,6 +63,7 @@ border-radius: 13px;
     padding: 0 20px;
     text-align: left;
     align-self: start;
+    margin-bottom: -22px;
   }
 
   .cont4{
@@ -67,6 +71,25 @@ border-radius: 13px;
     grid-row: 3 / span 1;
     padding: 0 20px;
     justify-self: start;
+    text-align: left;
+    align-self: start;
+  }
+
+  .cont5{
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+    padding: 0 20px;
+    justify-self: start;
+  }
+
+  h3{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px !important;
+
+    font-family: 'Inter' !important;
+    font-weight: 600 !important;
+    font-size: 20px !important;
   }
 
   .gallerygrid{

@@ -508,7 +508,15 @@ text-decoration: none;
   padding-bottom: 100px;
 }
 
-
+.cont2 > p{
+  border-top: 1px;
+  border-color: #fff;
+  border-style: solid;
+  padding-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
 /* Scroll Icon */
 
 .scroll-icon {
