@@ -51,6 +51,7 @@ body{
     background-color: var(--darkback);
     color: var(--darkmodetext);
     font-size: 14px;
+    font-family: 'Inter';
     }
 
 
@@ -1089,10 +1090,11 @@ padding:5px 0;
 
   .image-grid{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    max-width: 50rem;
+    grid-template-columns: repeat(4,1fr);
+    max-width: 80rem;
     margin-inline: auto;
     position: relative;
+    padding-top: 4rem;
   }
 
 
@@ -1113,7 +1115,7 @@ border-radius: 2rem;
 }
 
 img:has(+ .img-descr:hover){
-  filter: blur(2px) contrast(90%);
+  filter: blur(2px) contrast(90%) brightness(50%);
 }
 
 
@@ -1129,8 +1131,13 @@ img:has(+ .img-descr:hover){
     right: 0;
     opacity: 0;
     padding-top: 38%;
-    font-family: 'Inter';
-    font-size: 2rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: clamp(1rem,2.5vw,2rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
   }
 
   .img-descr:hover {
@@ -1138,4 +1145,8 @@ img:has(+ .img-descr:hover){
     opacity: 1;
     background: transparent;
     transition: 250ms ease;
+  }
+
+  .image-grid > a{
+    color: var(--companylinktext);
   }
