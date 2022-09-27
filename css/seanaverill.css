@@ -1086,3 +1086,56 @@ padding:5px 0;
   .iconspacer{
   padding-right: 2px;
   }
+
+  .image-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 50rem;
+    margin-inline: auto;
+    position: relative;
+  }
+
+
+  .image-cont > .img-img{
+width:95%;
+height: 95%;
+aspect-ratio: 1/1;
+object-fit: cover;
+transition: scale 250ms ease, opacity 250ms linear;
+border-radius: 2rem;
+  }
+
+
+.image-grid:has(.img-descr:hover) img:not(:has(+ .img-descr:hover)){
+  scale: 0.9;
+  opacity: .8;
+  border-radius: 2rem;
+}
+
+img:has(+ .img-descr:hover){
+  filter: blur(2px) contrast(90%);
+}
+
+
+  .image-cont{
+    position: relative;
+  }
+
+  .img-descr{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    padding-top: 45%;
+    font-family: 'Inter';
+    font-size: 2rem;
+  }
+
+  .img-descr:hover {
+    visibility: visible;
+    opacity: 1;
+    background: transparent;
+    transition: 250ms ease;
+  }
