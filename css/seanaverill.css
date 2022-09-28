@@ -1090,17 +1090,18 @@ padding:5px 0;
 
   .image-grid{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));;
     max-width: 80rem;
     margin-inline: auto;
     position: relative;
     padding-top: 4rem;
+    align-items: center;
+    grid-gap:10px;
   }
 
 
   .image-cont > .img-img{
-width:95%;
-height: 95%;
+width:100%;
 aspect-ratio: 1/1;
 object-fit: cover;
 transition: scale 250ms ease, opacity 250ms linear;
@@ -1123,17 +1124,20 @@ img:has(+ .img-descr:hover){
     position: relative;
   }
 
+
   .img-descr{
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    right:0;
     opacity: 0;
-    padding-top: 38%;
+    
+    padding-top: 30%;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: clamp(1rem,2.5vw,2rem);
+
+    font-size: clamp(1.5rem,2.5vw,2rem);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
