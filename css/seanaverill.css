@@ -14,11 +14,14 @@
   --darkmodetext:#fff;
   --lightaccent:#22295d;
   --darkaccent:#eea425;
+  --schoolaccent:#ffc600;
   --paneltext:#fff;
   --paneltitle:#fff;
   --switchcolor:#fff;
   --headercolor: transparent;
   --stickycolor:#ffffff1e;
+  --school:#317f8b;
+  --schooldark:#1f5166;
 
   --cardsectionback: transparent;
   --text-clear: rgba(255, 255, 255, 0);
@@ -165,6 +168,16 @@ label:active:after {
 color: var(--paneltext);
 border:0px;
   }
+
+  .school .descriptionitem{
+    font-size: clamp(1rem,1.5vw,1.3rem);
+  }
+
+  .schoollist{
+    font-size:1rem;
+  }
+
+
   @media(max-width:992px){
    .wrapper{
     width:85%;
@@ -176,6 +189,18 @@ border:0px;
       background: var(--paneltitleback);
       border-radius: 10px;
   }
+
+  .school > .panel-heading{
+    /* background: var(--school); */
+    border:solid 3px var(--darkaccent);
+  }
+
+  .school .panel-collapse,.school .collapse.in{
+    /* background: var(--schooldark); */
+    /* border:solid 2px var(--darkaccent); */
+
+  }
+
   .panelheadlight{
     background: var(--paneltitlebacklight);
   }
@@ -260,7 +285,9 @@ background: var(--panelbacklight) !important;
 margin-top:-250px
   }
 
-
+.careerHead{
+  padding-bottom: 20px;
+}
 
 .menu{
     position: absolute;
@@ -269,7 +296,7 @@ margin-top:-250px
 
 .headergrid{
 display: grid;
-grid-template-columns: 25% auto 60px 60px 60px 45px;
+grid-template-columns: 25% auto 60px 60px 60px 60px 45px;
 align-items: center;
 justify-items: start;
 }
@@ -309,8 +336,14 @@ justify-items: start;
     justify-self: center;
 
   }
-  .switchitem{
+  .menuitem4{
     grid-column: 6 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+
+  }
+  .switchitem{
+    grid-column: 7 / span 1;
     grid-row: 1 / span 1;
     justify-self: center;
 margin-top: -15px;
@@ -632,7 +665,7 @@ body{
     font-size:var(--headertablet);
   }
   .headergrid{
-    grid-template-columns: 25% auto 80px 80px 80px 45px;
+    grid-template-columns: 25% auto 80px 80px 80px 80px 45px;
     }
 
     .card__text{
@@ -655,7 +688,7 @@ body{
     font-size:var(--headerdesktop);
   }
   .headergrid{
-    grid-template-columns: 25% auto 100px 100px 100px 45px;
+    grid-template-columns: 25% auto 100px 100px 100px 100px 45px;
     }
     .card__background{
       color:var(--text-clear);
@@ -909,6 +942,7 @@ padding:5px 0;
     .cont1{
       grid-column: 1 / span 1;
       grid-row: 1 / span 4;
+      padding-top: 25px;
     }
     .cont2{
       grid-column: 2 / span 1;
