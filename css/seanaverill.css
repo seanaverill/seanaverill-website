@@ -1169,7 +1169,8 @@ img:has(+ .img-descr:hover){
     
     padding-left: 10px;
     padding-right: 10px;
-
+    display: grid;
+    align-items: center;
     font-size: clamp(1.5rem,2.5vw,1.7rem);
     font-weight: 700;
     text-transform: uppercase;
@@ -1181,7 +1182,7 @@ img:has(+ .img-descr:hover){
     visibility: visible;
     opacity: 1;
     background: transparent;
-    padding-top: 30%;
+   
 
     transition: 250ms ease;
   }
