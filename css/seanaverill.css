@@ -1142,6 +1142,28 @@ transition: scale 250ms ease, opacity 250ms linear;
 border-radius: 2rem;
   }
 
+  .image-cont > .img-img2{
+    width:100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    background: #fff;
+    padding: 8px;
+    transition: scale 250ms ease, opacity 250ms linear;
+    border-radius: 2rem;
+      }
+
+      .image-cont > .img-img3{
+        width:100%;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        background: #7f0000;
+        padding: 8px;
+        transition: scale 250ms ease, opacity 250ms linear;
+        border-radius: 2rem;
+          }
+
+
+      
 
 .image-grid:has(.img-descr:hover) img:not(:has(+ .img-descr:hover)){
   scale: 0.9;
